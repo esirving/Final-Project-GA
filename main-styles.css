@@ -228,6 +228,51 @@ White Stripes---#FFF
 	border-radius: 20px;
 }
 
+
+
+.aqua{
+	background-color: #35BBDE;
+}
+
+.red{
+	background-color: #FF5252;
+}
+
+.yellow{
+	background-color: #F5D71D;
+}
+
+
+
+.plan-card.aqua:hover{
+	width: 320px;
+	height: 450px;
+	/*background-color: #c5d7dc;*/
+	background-image: linear-gradient(#c5d7dc, #35BBDE);
+	border-radius: 20px;
+	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+}
+
+
+.plan-card.red:hover{
+	width: 320px;
+	height: 450px;
+	/*background-color: #fbb0b0;*/
+	background-image: linear-gradient(#fbb0b0, #FF5252);
+	border-radius: 20px;
+	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+}
+
+
+.plan-card.yellow:hover{
+	width: 320px;
+	height: 450px;
+	/*background-color: #f9f0bb;*/
+	background-image: linear-gradient(#f9f0bb, #F5D71D);
+	border-radius: 20px;
+	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+}
+
 .plan-name{
 	padding-bottom: 50px;
 	font-size: 45px;
@@ -238,10 +283,10 @@ White Stripes---#FFF
 
 }
 
-.heading-yellow-plans{
+.heading-white-plans{
 	font-family: 'Dosis', sans-serif;
 	font-weight: bold;
-	color: #F5D71D;
+	color: #FFF;
 	text-align: center;
 	font-size: 48px;
 	padding-top: 30px;
