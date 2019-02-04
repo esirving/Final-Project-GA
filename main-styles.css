@@ -29,6 +29,27 @@ a:active {
   color: #242834;
 }
 
+a:hover:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: red;
+	opacity: 1;
+	}
+
+a:after {
+    content: '';
+    position: relative;
+    width: 4px;
+    height: 2px;
+    background-color: red;
+    display: block;
+    top: 2px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.25s opacity ease 0.1s, 0.25s width ease-in-out;
+}
+
 /*font-family: 'Dosis', sans-serif;*/
 
 /*BRAND COLORS
@@ -51,10 +72,41 @@ White Stripes---#FFF
 
 }
 
+.heading-yellow{
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	color: #F5D71D;
+	text-align: center;
+	font-size: 48px;
+	padding-top: 100px;
+	letter-spacing: 3px;
+
+}
+
+.heading-blue{
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	color: #35BBDE;
+	text-align: center;
+	font-size: 48px;
+	padding-top: 100px;
+	letter-spacing: 3px;
+
+}
+
 .body-white{
 	font-family: 'Dosis', sans-serif;
 	color: #FFF;
 	text-align: left;
+	font-size: 28px;
+	padding-top: 20px;
+
+}
+
+.body-white-center{
+	font-family: 'Dosis', sans-serif;
+	color: #FFF;
+	text-align: center;
 	font-size: 28px;
 	padding-top: 20px;
 
@@ -69,7 +121,30 @@ White Stripes---#FFF
 
 }
 
+.step-heading-blue{
+	padding-bottom: 50px;
+	font-size: 45px;
+	color: #35BBDE;
+	font-family: 'Dosis', sans-serif;
 
+}
+
+.step-heading-red{
+	padding-bottom: 50px;
+	font-size: 45px;
+	color: #FF5252;
+	font-family: 'Dosis', sans-serif;
+
+}
+
+.step-heading-yellow{
+	padding-bottom: 50px;
+	font-size: 45px;
+	color: #F5D71D;
+	font-family: 'Dosis', sans-serif;
+
+
+}
 
 /*UNIVERSAL TEXT STYLES END*/
 
@@ -86,8 +161,12 @@ White Stripes---#FFF
 
 .header-bar{
 	background: #F5D71D;
-	max-width: 1200px;
+	width: 1200px;
 	height: 80px;
+	position: fixed;
+	top: 0;
+	border-bottom: solid #242834 1px;
+	z-index: 9;
 }
 
 .nav-items ul{
@@ -104,11 +183,15 @@ White Stripes---#FFF
 	padding-right: 20px;
 }
 
-.logo img{
-	width: 100%;
-	height: 69px;
-	margin-top: 0px;
+.logo{
+	background-image: url(https://i.imgur.com/zGfNgLd.png);
+	width: 500px;
+	height: 70px;
+	margin-top: 3px;
+	margin-left: 5px;
+	
 }
+
 
 
 
@@ -147,10 +230,23 @@ White Stripes---#FFF
 .how{
 	background: #242834;
 	max-width: 1200px;
-	height: 700px;
+	height: 650px;
 }
 
 .shadow-box{
+	background: #242834;
+	width: 1100px;
+	height: 600px;
+	/*box-shadow: 1px 0 4px 8px rgba(0,0,0,0.15);*/
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.4s ease-in-out;
+}
+
+.shadow-box:hover{
 	background: #242834;
 	width: 1100px;
 	height: 600px;
@@ -160,6 +256,8 @@ White Stripes---#FFF
 	justify-content: space-evenly;
 	align-items: center;
 	flex-direction: column;
+	transform: translateY(-20px);
+	transition: 0.4s ease-in-out;
 }
 
 .shadow-wrapper{
@@ -187,8 +285,9 @@ White Stripes---#FFF
 	color: #FF5252;
 	text-align: center;
 	font-size: 48px;
-	padding-top: 30px;
+	padding-top: 0px;
 	letter-spacing: 3px;
+	margin-top: 100px;
 
 }
 
@@ -198,7 +297,7 @@ White Stripes---#FFF
 .plans{
 	background: #242834;
 	max-width: 1200px;
-	height: 600px;
+	height: 700px;
 }
 
 
@@ -226,20 +325,23 @@ White Stripes---#FFF
 	height: 450px;
 	background-color: #D8D8D8;
 	border-radius: 20px;
+
 }
 
 
 
 .aqua{
-	background-color: #35BBDE;
-}
+ background-color: #35BBDE;
+ transition: 0.4s ease-in-out;}
 
 .red{
 	background-color: #FF5252;
+	transition: 0.4s ease-in-out;
 }
 
 .yellow{
 	background-color: #F5D71D;
+	transition: 0.4s ease-in-out;
 }
 
 
@@ -248,29 +350,35 @@ White Stripes---#FFF
 	width: 320px;
 	height: 450px;
 	/*background-color: #c5d7dc;*/
-	background-image: linear-gradient(#c5d7dc, #35BBDE);
+	background-color: #35BBDE;
 	border-radius: 20px;
 	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+	transform: translateY(-20px);
+	transition: 0.4s ease-in-out;
+
 }
 
 
 .plan-card.red:hover{
 	width: 320px;
 	height: 450px;
-	/*background-color: #fbb0b0;*/
-	background-image: linear-gradient(#fbb0b0, #FF5252);
+	background-color: #FF5252;
 	border-radius: 20px;
 	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+	transform: translateY(-20px);
+	transition: 0.4s ease-in-out;
 }
 
 
 .plan-card.yellow:hover{
 	width: 320px;
 	height: 450px;
-	/*background-color: #f9f0bb;*/
-	background-image: linear-gradient(#f9f0bb, #F5D71D);
+	background-color: #F5D71D;
 	border-radius: 20px;
 	box-shadow: 1px 0 4px 8px rgba(0,0,0,0.25);
+	transition: 1s background-image ease;
+	transform: translateY(-20px);
+	transition: 0.4s ease-in-out;
 }
 
 .plan-name{
@@ -289,41 +397,266 @@ White Stripes---#FFF
 	color: #FFF;
 	text-align: center;
 	font-size: 48px;
+	letter-spacing: 3px;
+	margin-top: 100px;
+
+}
+
+.button-shuffle-plan{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 60px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5D71D;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out
+}
+
+.button-shuffle-plan:hover{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 60px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #FF5252;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out;
+
+}
+
+.button-tour-plan{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 120px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #35BBDE;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out
+}
+
+.button-tour-plan:hover{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 120px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5D71D;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out;
+
+}
+
+.button-reunion-plan{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 120px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #FF5252;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out
+}
+
+.button-reunion-plan:hover{
+	width: 250px;
+	height: 60px;
+	margin-left: 40px;
+	margin-top: 120px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #35BBDE;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out;
+
+}
+
+.artists{
+	background: #242834;
+	max-width: 1200px;
+	height: 615px;
+	padding-top: 50px;
+}
+
+
+.heading-blue-artists{
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	color: #35BBDE;
+	text-align: center;
+	font-size: 48px;
 	padding-top: 30px;
 	letter-spacing: 3px;
 
 }
 
-.card-bttn{
-
+.artist-img{
+	width: 320px;
+	height: 320px;
+	background-color: #D8D8D8;
+	border-radius: 20px;
 }
 
-.artists{
-	background: #D8D8D8;
-	max-width: 1200px;
-	height: 600px;
+.artist-img1{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/8v6DHYr.jpg);
+	border-radius: 20px;
 }
+
+.artist-img2{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/lvoDfmz.jpg);
+	border-radius: 20px;
+}
+
+.artist-img3{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/9nuQG2U.jpg);
+	border-radius: 20px;
+}
+
+
+
 
 .starter-kit{
-	background: #F5F5F5;
+	background: #242834;
 	max-width: 1200px;
-	height: 600px;
+	height: 900px;
+	padding-top: 0px;
 }
 
-.merchandise{
-	background: #D8D8D8;
+.kit-hero{
+	width: 1200px;
+	height: 400px;
+	margin-top: 50px;
+}
+
+
+.kit-body-white{
+	font-family: 'Dosis', sans-serif;
+	color: #FFF;
+	text-align: center;
+	font-size: 36px;
+	padding-top: 40px;
+	line-height: 1.5;
+
+}
+
+
+.button-blue{
+	width: 250px;
+	height: 60px;
+	margin-left: 475px;
+	margin-top: 40px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #35BBDE;
+	border: 0px;
+	letter-spacing: 1px;
+	transition: 0.2s ease-in-out
+}
+
+.button-blue:hover{
+	width: 250px;
+	height: 60px;
+	margin-left: 475px;
+	margin-top: 40px;
+	border-radius: 40px;
+	font-family: 'Dosis', sans-serif;
+	color: #242834;
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5D71D;
+	border: 0px;
+	letter-spacing: 1px;
+	transform: translateY(-8px);
+	transition: 0.2s ease-in-out;
+
+}
+
+.store{
+	background: #242834;
 	max-width: 1200px;
-	height: 600px;
+	height: 650px;
+	padding-top: 50px;
+}
+
+.store-img1{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/TM5aKgf.jpg);
+	border-radius: 20px;
+}
+
+.store-img2{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/NaA7B4j.jpg);
+	border-radius: 20px;
+}
+
+.store-img3{
+	width: 320px;
+	height: 320px;
+	background-image: url(https://i.imgur.com/AqnzmHt.jpg);
+	border-radius: 20px;
+}
+
+.heading-red-store{
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	color: #FF5252;
+	text-align: center;
+	font-size: 48px;
+	letter-spacing: 3px;
+	margin-top: 60px;
 }
 
 .vinylgram{
-	background: #F5F5F5;
+	background: #242834;
 	max-width: 1200px;
-	height: 600px;
+	height: 950px;
+	padding-top: 0px;
 }
 
 .footer{
-	background: #333;
+	background: #F5D71D;
 	max-width: 1200px;
-	height: 300px;
+	height: 40px;
 }
