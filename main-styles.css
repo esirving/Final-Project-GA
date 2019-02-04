@@ -294,6 +294,9 @@ White Stripes---#FFF
 /*HOW IT WORKS STYLES END*/
 
 
+
+
+/*PLAN STYLES START*/
 .plans{
 	background: #242834;
 	max-width: 1200px;
@@ -501,6 +504,11 @@ White Stripes---#FFF
 
 }
 
+/*PLAN STYLES END*/
+
+
+
+/*GENRE STYLES START*/
 .artists{
 	background: #242834;
 	max-width: 1200px;
@@ -548,9 +556,10 @@ White Stripes---#FFF
 	border-radius: 20px;
 }
 
+/*PLAN STYLES END*/
 
 
-
+/*STARTER KIT STYLES START*/
 .starter-kit{
 	background: #242834;
 	max-width: 1200px;
@@ -609,7 +618,10 @@ White Stripes---#FFF
 	transition: 0.2s ease-in-out;
 
 }
+/*STARTER KIT STYLES END*/
 
+
+/*STORE STYLES START*/
 .store{
 	background: #242834;
 	max-width: 1200px;
@@ -648,15 +660,23 @@ White Stripes---#FFF
 	margin-top: 60px;
 }
 
+/*STORE STYLES END*/
+
+
+/*VINYGRAM STYLES START*/
 .vinylgram{
 	background: #242834;
 	max-width: 1200px;
 	height: 950px;
 	padding-top: 0px;
 }
+/*VINYGRAM STYLES END*/
 
+
+/*FOOTER STYLES START*/
 .footer{
 	background: #F5D71D;
 	max-width: 1200px;
 	height: 40px;
 }
+/*FOOTER STYLES END*/
